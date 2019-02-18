@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteRule ^index$ index.html
+RewriteEngine on
+RewriteRule ^info$ info.php
+RewriteEngine on
+RewriteRule ^phpinfo$ phpinfo.php 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
