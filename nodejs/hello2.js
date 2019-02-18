@@ -123,7 +123,7 @@ app.get('/hellodata', function (req, res){
         console.log(req.query.response);
   console.log(req.query.response == "XML");
 	if(req.query.response == "JSON"){
-	
+	res.setHeader('Content-Type', 'application/json');
 		res.end(JSON.stringify(response));
 	}else if(req.query.response == "xml"){
 		res.set('Content-Type', 'text/xml');
